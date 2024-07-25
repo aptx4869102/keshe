@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  servlet:
+    multipart:
+      max-file-size: 50000MB
+      max-request-size: 500000MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis
+    username: root
+    password: WLXAPTX-4869
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          max-age: 1
+          must-revalidate: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
